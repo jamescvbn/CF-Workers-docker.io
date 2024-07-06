@@ -1,4 +1,4 @@
-[**第三方 DockerHub 镜像服务列表**](https://github.com/cmliu/CF-Workers-docker.io?tab=readme-ov-file#%E7%AC%AC%E4%B8%89%E6%96%B9-dockerhub-%E9%95%9C%E5%83%8F%E6%9C%8D%E5%8A%A1)
+[**第三方 DockerHub 镜像服务列表**](https://github.com/jamescvbn/CF-Workers-docker.io?tab=readme-ov-file#%E7%AC%AC%E4%B8%89%E6%96%B9-dockerhub-%E9%95%9C%E5%83%8F%E6%9C%8D%E5%8A%A1)
 
 # CF-Workers-docker.io：Docker仓库镜像代理工具
 
@@ -6,19 +6,19 @@
 
 ## 部署方式
 
-- **Workers** 部署：复制 [_worker.js](https://github.com/cmliu/CF-Workers-docker.io/blob/main/_worker.js) 代码，`保存并部署`即可
+- **Workers** 部署：复制 [_worker.js](https://github.com/jamescvbn/CF-Workers-docker.io/blob/main/_worker.js) 代码，`保存并部署`即可
 - **Pages** 部署：`Fork` 后 `连接GitHub` 一键部署即可
 
 ## 如何使用？
 
-例如您的Workers项目域名为：`docker.fxxk.dedyn.io`；
+例如您的Workers项目域名为：`docker.laoz.prvcy.page`；
 
 ### 1.官方镜像路径前面加域名
 ```shell
-docker pull docker.fxxk.dedyn.io/stilleshan/frpc:latest
+docker pull docker.laoz.prvcy.page/stilleshan/frpc:latest
 ```
 ```shell
-docker pull docker.fxxk.dedyn.io/library/nginx:stable-alpine3.19-perl
+docker pull docker.laoz.prvcy.page/library/nginx:stable-alpine3.19-perl
 ```
 
 ### 2.一键设置镜像加速
@@ -27,7 +27,9 @@ docker pull docker.fxxk.dedyn.io/library/nginx:stable-alpine3.19-perl
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://docker.fxxk.dedyn.io"]  # 请替换为您自己的Worker自定义域名
+  "registry-mirrors": [
+    "https://docker.laoz.prvcy.page"  # 请替换为您自己的Worker自定义域名
+  ]
 }
 EOF
 sudo systemctl daemon-reload
@@ -35,9 +37,9 @@ sudo systemctl restart docker
 ```
 
 ## 变量说明
-| 变量名 | 示例 | 必填 | 备注 | 
+| 变量名 | 示例 | 必填 | 备注 |
 |--|--|--|--|
-| URL302 | https://t.me/CMLiussss |❌| 主页302跳转 |
+| URL302 | https://github.com/jamescvbn/CF-Workers-docker.io |❌| 主页302跳转 |
 | URL | https://www.baidu.com/ |❌| 主页伪装(设为`nginx`则伪装为nginx默认页面) |
 | UA | netcraft |❌| 支持多元素, 元素之间使用空格或换行作间隔 |
 
@@ -79,5 +81,5 @@ sudo systemctl restart docker
 
 # 鸣谢
 
-[muzihuaner](https://github.com/muzihuaner)、[V2ex网友](https://global.v2ex.com/t/1007922)、[ciiiii](https://github.com/ciiiii/cloudflare-docker-proxy)、[ChatGPT](https://chatgpt.com/)、[白嫖哥](https://t.me/bestcfipas/1900)、[zero_free频道](https://t.me/zero_free/80)、[dongyubin](https://github.com/cmliu/CF-Workers-docker.io/issues/8)、[kiko923](https://github.com/cmliu/CF-Workers-docker.io/issues/5)
+[cmliu/CF-Workers-docker.io](https://github.com/cmliu/CF-Workers-docker.io)、[muzihuaner](https://github.com/muzihuaner)、[V2ex网友](https://global.v2ex.com/t/1007922)、[ciiiii](https://github.com/ciiiii/cloudflare-docker-proxy)、[ChatGPT](https://chatgpt.com/)、[白嫖哥](https://t.me/bestcfipas/1900)、[zero_free频道](https://t.me/zero_free/80)、[dongyubin](https://github.com/cmliu/CF-Workers-docker.io/issues/8)、[kiko923](https://github.com/cmliu/CF-Workers-docker.io/issues/5)
 
